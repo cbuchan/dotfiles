@@ -6,8 +6,9 @@
 
 - link:
     ~/.aliases: .aliases
-    ~/.tmux.conf: .tmux.conf
+    ~/.pryrc: .pryrc
     ~/.tmux.conf.line: .tmux.conf.line
+    ~/.tmux.conf: .tmux.conf
     ~/.vim: .vim
     ~/.vimrc: .vimrc
     ~/.zshrc: .zshrc
