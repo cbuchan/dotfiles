@@ -24,20 +24,19 @@ endif
 "Plug 'scrooloose/syntastic'
 "Plug 'gmarik/Vundle.vim'
 
-Plug 'w0rp/ale'
-Plug 'flowtype/vim-flow'
 Plug 'ap/vim-css-color'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'flowtype/vim-flow'
 Plug 'itchyny/lightline.vim'
-Plug 'jwhitley/vim-matchit'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'sheerun/vim-polyglot'
 Plug 'szw/vim-ctrlspace'
+Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-unimpaired'
+Plug 'w0rp/ale'
 
 call plug#end()
 
