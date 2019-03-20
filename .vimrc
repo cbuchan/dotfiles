@@ -22,12 +22,12 @@ endif
 "Plug 'gorodinskiy/vim-coloresque'
 "Plug 'mkitt/tabline.vim'
 "Plug 'scrooloose/syntastic'
+"Plug 'gmarik/Vundle.vim'
 
 Plug 'w0rp/ale'
 Plug 'flowtype/vim-flow'
 Plug 'ap/vim-css-color'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'gmarik/Vundle.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jwhitley/vim-matchit'
 Plug 'nathanaelkane/vim-indent-guides'
