@@ -2,10 +2,15 @@
     link:
       relink: true
 
-- clean: ['~']
+- shell:
+  - [mkdir -p ~/.config, Creating config directory]
+  - [mkdir -p ~/.config/nvim, Creating nvim directory]
+
+- clean: ['~', '~/.config']
 
 - link:
     ~/.aliases: .aliases
+    ~/.config/nvim/init.vim: .config/nvim/init.vim
     ~/.pryrc: .pryrc
     ~/.tmux.conf.line: .tmux.conf.line
     ~/.tmux.conf: .tmux.conf
