@@ -3,7 +3,6 @@
       relink: true
 
 - shell:
-  - [mkdir -p ~/.config, Creating config directory]
   - [mkdir -p ~/.config/nvim, Creating nvim directory]
 
 - clean: ['~', '~/.config']
