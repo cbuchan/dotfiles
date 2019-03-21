@@ -7,6 +7,9 @@
 
 - clean: ['~', '~/.config']
 
+- brewfile:
+  - Brewfile
+
 - link:
     ~/.aliases: .aliases
     ~/.config/nvim/init.vim: .config/nvim/init.vim
@@ -19,3 +22,10 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [mas install 1333542190, Install 1Password from App Store]
+  - [mas install 413857545, Install Divvy from App Store]
+  - [mas install 803453959, Install Slack from App Store]
+  - [mas install 969418666, Install Colorsnapper from App Store]
+  - [mas install 975937182, Install Fantastical from App Store]
+  - [mas install 497799835, Install Xcode from App Store]
+  - [mas install 410628904, Install Wunderlist from App Store]
