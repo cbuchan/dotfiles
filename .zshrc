@@ -86,8 +86,17 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.aliases
+source /usr/local/share/chruby/chruby.sh
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if [ -d /usr/local/al-scripts/profile.d ]; then
+  for config in /usr/local/al-scripts/profile.d/*.sh; do
+    if [ -r $config ]; then
+      . $config
+    fi
+  done
+fi

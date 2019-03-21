@@ -5,6 +5,7 @@ alias jslint='./node_modules/eslint/bin/eslint.js --rulesdir ./js_infra/eslint_r
 alias zsh='/usr/bin/zsh'
 alias gdc='git diff --cached'
 
+alias cdd='cd ~/Workspace/dotfiles'
 alias cdr='cd ~/co/release && svn info | grep URL'
 alias cdw='cd ~/Workspace'
 alias cda='cd ~/Workspace/AngelList'
