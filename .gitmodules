@@ -17,7 +17,7 @@
 
 [submodule ".vim/plugged/lightline.vim"]
   path = .vim/plugged/lightline.vim
-  url = https://github.com/itchyny/lightline.git
+  url = https://github.com/itchyny/lightline.vim.git
 
 [submodule ".vim/plugged/vim-better-whitespace"]
   path = .vim/plugged/vim-better-whitespace
