@@ -10,6 +10,10 @@
 - brewfile:
   - Brewfile
 
+- shell:
+  - [brew update, Updating homebrew]
+  - [brew upgrade --ignore-pinned, Upgrading homebrew]
+
 - link:
     ~/.aliases: .aliases
     ~/.config/nvim/init.vim: .config/nvim/init.vim
