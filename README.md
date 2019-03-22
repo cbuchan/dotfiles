@@ -1,2 +1,2 @@
 # dotfiles
-Environment config
+Run ./install to begin
