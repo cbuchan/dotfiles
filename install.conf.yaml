@@ -13,6 +13,7 @@
 - shell:
   - [brew update, Updating homebrew]
   - [brew upgrade --ignore-pinned, Upgrading homebrew]
+  - [brew cu --all, Upgrading casks]
 
 - link:
     ~/.aliases: .aliases
@@ -33,3 +34,4 @@
   - [mas install 975937182, Install Fantastical from App Store]
   - [mas install 497799835, Install Xcode from App Store]
   - [mas install 410628904, Install Wunderlist from App Store]
+  - [mas upgrade, Upgrade App Store apps]
