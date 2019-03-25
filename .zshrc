@@ -85,7 +85,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.aliases
+source ~/.aliases.sh
 source /usr/local/share/chruby/chruby.sh
 
 export PATH="/usr/local/bin:$PATH"
