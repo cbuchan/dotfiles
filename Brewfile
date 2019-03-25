@@ -6,11 +6,12 @@ tap "caskroom/cask"
 tap "buo/cask-upgrade"
 
 # Brews
-brew "tmux"
+brew "chruby"
 brew "git"
 brew "mas"
 brew "neovim"
 brew "node"
+brew "tmux"
 brew "tree"
 brew "wget"
 
