@@ -13,10 +13,10 @@
 - shell:
   - [brew update, Updating homebrew]
   - [brew upgrade --ignore-pinned, Upgrading homebrew]
-  - [brew cu --all, Upgrading casks]
+  - [brew cu --all -y, Upgrading casks]
 
 - link:
-    ~/.aliases: .aliases
+    ~/.aliases.sh: .aliases.sh
     ~/.config/nvim/init.vim: .config/nvim/init.vim
     ~/.pryrc: .pryrc
     ~/.tmux.conf.line: .tmux.conf.line
