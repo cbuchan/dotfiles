@@ -28,3 +28,6 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [mas upgrade, Upgrade App Store apps]
+
+- shell:
+  - [./macos.sh, Installing macOS settings]

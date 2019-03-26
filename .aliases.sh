@@ -90,3 +90,6 @@ if [[ $0 == *zsh* ]]; then
       _wanted files expl 'local files' _files
   }
 fi
+
+# Rails aliases
+alias bi="bundle install"
