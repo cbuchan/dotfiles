@@ -34,9 +34,16 @@ alias gst='git status'
 alias gl='glog'
 alias gup='git fetch && git rebase'
 alias gp='git push'
+
 function gdv() {
   git diff -w "$@" | view -
 }
+
+function gcr() {
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  git push -u origin $BRANCH;
+}
+
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gco='git checkout'
