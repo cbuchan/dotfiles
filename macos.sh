@@ -5,3 +5,5 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
+# Set screenshots directory
+defaults write com.apple.screencapture location -string "${HOME}/Screenshots"

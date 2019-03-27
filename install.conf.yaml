@@ -4,6 +4,7 @@
 
 - shell:
   - [mkdir -p ~/.config/nvim, Creating nvim directory]
+  - [mkdir -p ~/Screenshots, Creating screenshots directory]
 
 - clean: ['~', '~/.config']
 
