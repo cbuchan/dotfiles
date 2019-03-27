@@ -79,7 +79,7 @@ alias gra='git rebase --abort'
 alias grmi='git rebase master -i'
 
 alias gsr="git pull --rebase origin master"
-alias gsri="git pull --rebase origin master -i"
+alias gsri="git pull --rebase=i origin master"
 
 alias gsl='git svn log -p -r'
 alias gbl='for k in `git branch | sed s/^..//`; do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k --`\\t"$k";done | sort'
