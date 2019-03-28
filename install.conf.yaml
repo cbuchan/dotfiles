@@ -27,6 +27,7 @@
     ~/.zshrc: .zshrc
 
 - shell:
+  - [source ~/.zshrc, Loading new zsh settings]
   - [git submodule update --init --recursive, Installing submodules]
   - [mas upgrade, Upgrade App Store apps]
 
