@@ -20,6 +20,7 @@
     ~/.aliases.sh: .aliases.sh
     ~/.config/nvim/init.vim: .config/nvim/init.vim
     ~/.pryrc: .pryrc
+    ~/.ripgreprc: .ripgreprc
     ~/.tmux.conf.line: .tmux.conf.line
     ~/.tmux.conf: .tmux.conf
     ~/.vim: .vim

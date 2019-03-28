@@ -88,6 +88,8 @@ export EDITOR='vim'
 source ~/.aliases.sh
 source /usr/local/share/chruby/chruby.sh
 
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
