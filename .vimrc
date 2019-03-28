@@ -16,14 +16,6 @@ else
   call plug#begin('~/.vim/plugged')
 endif
 
-"Plug 'Valloric/YouCompleteMe'
-"Plug 'bling/vim-airline'
-"Plug 'edkolev/tmuxline.vim'
-"Plug 'gorodinskiy/vim-coloresque'
-"Plug 'mkitt/tabline.vim'
-"Plug 'scrooloose/syntastic'
-"Plug 'gmarik/Vundle.vim'
-
 Plug 'ap/vim-css-color'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'flowtype/vim-flow'
