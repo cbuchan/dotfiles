@@ -93,3 +93,4 @@ fi
 
 # Rails aliases
 alias bi="bundle install"
+alias rc="rails console"
