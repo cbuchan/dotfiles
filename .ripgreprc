@@ -5,6 +5,7 @@
 --glob=!package-lock.json
 --glob=!yarn.lock
 --glob=!.git
+--glob=!*.svg
 
 # Set the colors.
 --colors=path:fg:cyan
