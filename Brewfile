@@ -41,6 +41,7 @@ mas "1Password", id: 1333542190
 mas "Colorsnapper", id: 969418666
 mas "Divvy", id: 413857545
 mas "Fantastical", id: 975937182
+mas "Quip", id: 1003160018
 mas "Slack", id: 803453959
 mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
