@@ -115,11 +115,6 @@ let g:flow#showquickfix = 0
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
-
-let g:ale_javascript_eslint_executable = './node_modules/.bin/eslint'
-let g:ale_javascript_eslint_options = "-f compact --rulesdir ~/co/manage/js_infra/eslint_rules/"
-let g:ale_ruby_rubocop_options = '-c /path/to/testbed/.rubocop.yml'
-
 let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'flow'] }
 
 " Airline + Temuxline Config
@@ -306,6 +301,7 @@ set smartindent
 
 set nowrap
 set ignorecase
+set noswapfile
 
 set mouse-=a
 set backspace=indent,eol,start

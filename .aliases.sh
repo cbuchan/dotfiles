@@ -92,5 +92,6 @@ if [[ $0 == *zsh* ]]; then
 fi
 
 # Rails aliases
+alias be="bundle exec"
 alias bi="bundle install"
 alias rc="rails console"
