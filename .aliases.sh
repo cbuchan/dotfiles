@@ -8,8 +8,6 @@ alias gdc='git diff --cached'
 alias cdd='cd ~/Workspace/dotfiles'
 alias cdr='cd ~/co/release && svn info | grep URL'
 alias cdw='cd ~/Workspace'
-alias cda='cd ~/Workspace/AngelList'
-alias cdl='cd ~/Workspace/alist'
 
 function zspec () {
   bundle exec zeus test "$@" -fd
@@ -95,3 +93,10 @@ fi
 alias be="bundle exec"
 alias bi="bundle install"
 alias rc="rails console"
+
+# AngelList
+alias cda='cd ~/Workspace/AngelList'
+alias cdl='cd ~/Workspace/alist'
+
+alias mdl='LOG_LEVEL=WARN make debug'
+alias mdd='make debug-deps'
