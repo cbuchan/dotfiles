@@ -318,3 +318,4 @@ highlight ExtraWhitespace guibg=#990000 ctermbg=red
 :" Show leading whitespace that includes spaces, and trailing whitespace.
 ":autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
 
+au BufNewFile,BufRead *.ejs set filetype=html
