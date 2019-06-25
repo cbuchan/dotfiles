@@ -18,7 +18,6 @@ endif
 
 Plug 'ap/vim-css-color'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'flowtype/vim-flow'
 Plug 'itchyny/lightline.vim'
 Plug 'jparise/vim-graphql'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -105,17 +104,11 @@ set foldlevel=0
 
 set omnifunc=syntaxcomplete#Complete
 
-" Polyglot
-let g:javascript_plugin_flow = 1
-
-" Flow
-let g:flow#showquickfix = 0
-
 " Ale
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
-let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'flow'] }
+let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'tslint'] }
 
 " Airline + Temuxline Config
 let g:tmuxline_preset = 'tmux'
