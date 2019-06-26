@@ -3,10 +3,10 @@
       relink: true
 
 - shell:
-  - ["command -v brew || ruby -e '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'", Installing homebrew]
   - [mkdir -p ~/.config/nvim, Creating nvim directory]
   - [mkdir -p ~/Screenshots, Creating screenshots directory]
   - [brew link --overwrite node, Fix brew node]
+  - [./macos.sh, Installing macOS settings]
 
 - clean: ['~', '~/.config']
 
@@ -33,6 +33,3 @@
   - [source ~/.zshrc, Loading new zsh settings]
   - [git submodule update --init --recursive, Installing submodules]
   - [mas upgrade, Upgrade App Store apps]
-
-- shell:
-  - [./macos.sh, Installing macOS settings]
