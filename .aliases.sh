@@ -32,6 +32,7 @@ alias gst='git status'
 alias gl='glog'
 alias gup='git fetch && git rebase'
 alias gp='git push'
+alias gpf='git push -f'
 
 function gdv() {
   git diff -w "$@" | view -
@@ -97,6 +98,7 @@ alias rc="rails console"
 # AngelList
 alias cda='cd ~/Workspace/AngelList'
 alias cdl='cd ~/Workspace/alist'
+alias gql='rake graphql:schema:dump && rake graphql:export && yarn run export'
 
 alias mdl='LOG_LEVEL=WARN make debug'
 alias mdd='make debug-deps'
