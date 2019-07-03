@@ -7,3 +7,6 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Set screenshots directory
 defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
+
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES

@@ -265,7 +265,11 @@ let g:indent_guides_start_level = 2 "Indent from second level onwards
 let g:indent_guides_enable_on_vim_startup = 1 "Start with Vim
 
 " Silver Searcher
-if executable('ag')
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+elseif executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
