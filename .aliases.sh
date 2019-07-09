@@ -43,6 +43,16 @@ function gcr() {
   git push -u origin $BRANCH;
 }
 
+function gbb() {
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  BRANCH_BACK="$BRANCH-back"
+  exists=`git show-ref refs/heads/$BRANCH_BACK`
+  if [ -n "$exists" ]; then
+    git branch -D "$BRANCH-back"
+  fi
+  git checkout -b "$BRANCH-back" && git checkout master && git pull --rebase origin master && git checkout $BRANCH;
+}
+
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gco='git checkout'
