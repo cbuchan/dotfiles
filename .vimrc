@@ -22,6 +22,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'jparise/vim-graphql'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 Plug 'sheerun/vim-polyglot'
 Plug 'szw/vim-ctrlspace'
 Plug 'tmhedberg/matchit'
@@ -30,9 +31,24 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 
+if has('nvim')
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/denite.nvim'
+endif
+
 call plug#end()
 
 filetype plugin indent on
+
+" Plugin configuration
+if has('nvim')
+  let g:python_host_prog = '/usr/bin/python'
+  let g:python3_host_prog = '/usr/local/bin/python3'
+  let g:ruby_host_prog = '/Users/cbuchan/.gem/ruby/2.4.5/bin/neovim-ruby-host'
+  let g:deoplete#enable_at_startup = 1
+endif
 
 " Spaces & Tabs
 set tabstop=2
@@ -108,7 +124,15 @@ set omnifunc=syntaxcomplete#Complete
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
-let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'tslint'] }
+let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint'], 'typescript': ['tslint'] }
+
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint', 'prettier'],
+\}
+
 
 " Airline + Temuxline Config
 let g:tmuxline_preset = 'tmux'
