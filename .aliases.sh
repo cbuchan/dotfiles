@@ -53,6 +53,11 @@ function gbb() {
   git checkout -b "$BRANCH-back" && git checkout master && git pull --rebase origin master && git checkout $BRANCH;
 }
 
+function gmm() {
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  git checkout master && git fetch -p origin && git merge origin/master && git checkout $BRANCH && git merge master
+}
+
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gco='git checkout'
