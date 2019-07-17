@@ -10,3 +10,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
 
 # Show hidden files
 defaults write com.apple.finder AppleShowAllFiles YES
+
+# VSCodeVim
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false         # For VS Code
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false # For VS Code Insider
