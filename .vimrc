@@ -32,6 +32,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 
 if has('nvim')
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'othree/yajs.vim'
   Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescript.tsx']}
   Plug 'Shougo/deoplete.nvim'
   Plug 'Shougo/denite.nvim'
@@ -47,6 +49,7 @@ if has('nvim')
   let g:python3_host_prog = '/usr/local/bin/python3'
   let g:ruby_host_prog = '/Users/cbuchan/.gem/ruby/2.4.5/bin/neovim-ruby-host'
   let g:deoplete#enable_at_startup = 1
+  let g:polyglot_disabled = ['javascript', 'typescript']
 endif
 
 " Spaces & Tabs
