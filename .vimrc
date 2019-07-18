@@ -45,11 +45,12 @@ filetype plugin indent on
 
 " Plugin configuration
 if has('nvim')
-  let g:python_host_prog = '/usr/bin/python'
+  let g:python_host_prog = '/usr/local/bin/python'
   let g:python3_host_prog = '/usr/local/bin/python3'
   let g:ruby_host_prog = '/Users/cbuchan/.gem/ruby/2.4.5/bin/neovim-ruby-host'
   let g:deoplete#enable_at_startup = 1
   let g:polyglot_disabled = ['javascript', 'typescript']
+  let g:nvim_typescript#diagnostics_enable = 0
 endif
 
 " Spaces & Tabs
@@ -342,3 +343,4 @@ highlight ExtraWhitespace guibg=#990000 ctermbg=red
 ":autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
 
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufWrite *.ts,*.tsx TSGetDiagnostics
