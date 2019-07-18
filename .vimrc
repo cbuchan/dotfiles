@@ -32,8 +32,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 
 if has('nvim')
-  Plug 'HerringtonDarkholme/yats.vim'
-  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+  Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescript.tsx']}
   Plug 'Shougo/deoplete.nvim'
   Plug 'Shougo/denite.nvim'
 endif
