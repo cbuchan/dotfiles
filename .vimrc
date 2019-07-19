@@ -310,10 +310,6 @@ elseif executable('ag')
 endif
 
 " Misc
-"noremap l h
-"noremap ; l
-"noremap h ;
-
 nnoremap K <Nop>
 nnoremap <leader>K <Nop>
 

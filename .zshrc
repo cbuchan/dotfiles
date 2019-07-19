@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="${PATH}:/Users/cbuchan/adt-bundle-mac/sdk/platform-tools"
 export PATH="${PATH}:/Users/cbuchan/adt-bundle-mac/sdk/tools"
 export PATH="${PATH}:$HOME/.rvm/bin" # Add RVM to PATH for scripting
