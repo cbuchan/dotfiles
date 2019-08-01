@@ -18,6 +18,7 @@ brew "tree"
 brew "wget"
 
 # Applications
+cask "abstract"
 cask "alfred"
 cask "bartender"
 cask "bettertouchtool"
