@@ -4,7 +4,6 @@
 syntax on
 set background=dark
 colorscheme solarized
-let g:solarized_termtrans = 0
 
 " Launch Config
 
