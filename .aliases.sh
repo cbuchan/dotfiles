@@ -117,3 +117,6 @@ alias gql='rake graphql:schema:dump && rake graphql:export && yarn run export'
 
 alias mdl='LOG_LEVEL=WARN make debug'
 alias mdd='make debug-deps'
+
+# Bitbadge
+alias cdb='cd ~/Workspace/bitbadge-shopify'

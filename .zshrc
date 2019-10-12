@@ -93,6 +93,12 @@ export RIPGREP_CONFIG_PATH=~/.ripgreprc
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+# NVM setup
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+# [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 if [ -d /usr/local/al-scripts/profile.d ]; then
