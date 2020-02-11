@@ -1,0 +1,15 @@
+if has('nvim')
+  call plug#begin('~/.local/share/nvim/plugged')
+else
+  call plug#begin('~/.vim/plugged')
+endif
+
+if has('nvim')
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'othree/yajs.vim'
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/denite.nvim'
+  Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescript.tsx']}
+endif
+
+call plug#end()

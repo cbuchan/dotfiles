@@ -108,3 +108,14 @@ if [ -d /usr/local/al-scripts/profile.d ]; then
     fi
   done
 fi
+
+# Benchling
+export PATH=$PATH:$HOME/aurelia/bin
+
+source $HOME/.benchling-dotfiles/.zshrc.benchling
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# source ~/.envs/aurelia/bin/activate
+
+# Code kata
+eval "$(pyenv init -)"
+export PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin"

@@ -34,9 +34,9 @@ Plug 'w0rp/ale'
 if has('nvim')
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'othree/yajs.vim'
-  Plug 'mhartington/nvim-typescript', {'do': './install.sh', 'for': ['typescript', 'typescript.tsx']}
   Plug 'Shougo/deoplete.nvim'
   Plug 'Shougo/denite.nvim'
+  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 endif
 
 call plug#end()
@@ -45,12 +45,15 @@ filetype plugin indent on
 
 " Plugin configuration
 if has('nvim')
-  let g:python_host_prog = '/usr/local/bin/python'
+  "let g:python_host_prog = '/usr/local/bin/python'
+  let g:python_host_prog = '/usr/local/bin/python2'
   let g:python3_host_prog = '/usr/local/bin/python3'
-  let g:ruby_host_prog = '/Users/cbuchan/.gem/ruby/2.4.5/bin/neovim-ruby-host'
-  let g:deoplete#enable_at_startup = 1
-  let g:polyglot_disabled = ['javascript', 'typescript']
+  let g:ruby_host_prog = '~/.rvm/gems/ruby-2.6.3/bin/neovim-ruby-host'
+  let g:deoplete#enable_at_startup = 0
+  "let g:polyglot_disabled = ['javascript', 'typescript']
   let g:nvim_typescript#diagnostics_enable = 0
+
+  call deoplete#custom#source('ale', 'rank', 999)
 endif
 
 " Spaces & Tabs
@@ -131,11 +134,15 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
 let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint'], 'typescript': ['tslint', 'tsserver'] }
 
+let g:ale_typescript_tslint_use_global = 0
+let g:ale_typescript_tslint_config_path = '/Users/collin/Workspace/aurelia/tslint.json'
+
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
 \   'typescript': ['tslint', 'prettier'],
+\   'typescriptreact': ['tslint', 'prettier'],
 \}
 
 " Airline + Temuxline Config

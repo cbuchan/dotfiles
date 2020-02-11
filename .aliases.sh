@@ -43,6 +43,11 @@ function gcr() {
   git push -u origin $BRANCH;
 }
 
+function gcrf() {
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  git push -u -f origin $BRANCH;
+}
+
 function gbb() {
   BRANCH=$(git rev-parse --abbrev-ref HEAD)
   BRANCH_BACK="$BRANCH-back"
@@ -92,8 +97,8 @@ alias grc='git rebase --continue'
 alias gra='git rebase --abort'
 alias grmi='git rebase master -i'
 
-alias gsr="git pull --rebase origin master"
-alias gsri="git pull --rebase=i origin master"
+alias gsr="git pull --rebase origin dev"
+alias gsri="git pull --rebase=i origin dev"
 
 alias gsl='git svn log -p -r'
 alias gbl='for k in `git branch | sed s/^..//`; do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k --`\\t"$k";done | sort'
@@ -119,4 +124,9 @@ alias mdl='LOG_LEVEL=WARN make debug'
 alias mdd='make debug-deps'
 
 # Bitbadge
-alias cdb='cd ~/Workspace/bitbadge-shopify'
+alias cdbb='cd ~/Workspace/bitbadge-shopify'
+
+# Benchling
+alias cdb='cd ~/Workspace/aurelia'
+
+alias bd='bin/dev'

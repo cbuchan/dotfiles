@@ -5,8 +5,8 @@
 - shell:
   - [mkdir -p ~/.config/nvim, Creating nvim directory]
   - [mkdir -p ~/Screenshots, Creating screenshots directory]
-  - [brew link --overwrite node, Fix brew node]
   - [./macos.sh, Installing macOS settings]
+  # - [brew link --overwrite node, Fix brew node]
 
 - clean: ['~', '~/.config']
 
