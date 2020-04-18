@@ -16,8 +16,10 @@ else
   call plug#begin('~/.vim/plugged')
 endif
 
+Plug 'SirVer/ultisnips'
 Plug 'ap/vim-css-color'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
 Plug 'jparise/vim-graphql'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -25,7 +27,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 Plug 'sheerun/vim-polyglot'
 Plug 'szw/vim-ctrlspace'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tmhedberg/matchit'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -46,12 +50,12 @@ filetype plugin indent on
 " Plugin configuration
 if has('nvim')
   "let g:python_host_prog = '/usr/local/bin/python'
-  let g:python_host_prog = '/usr/local/bin/python2'
-  let g:python3_host_prog = '/usr/local/bin/python3'
+  let g:python_host_prog = '/Users/collin/.pyenv/versions/neovim2/bin/python'
+  let g:python3_host_prog = '/Users/collin/.pyenv/versions/neovim3/bin/python'
   let g:ruby_host_prog = '~/.rvm/gems/ruby-2.6.3/bin/neovim-ruby-host'
-  let g:deoplete#enable_at_startup = 0
+  let g:deoplete#enable_at_startup = 1
   "let g:polyglot_disabled = ['javascript', 'typescript']
-  let g:nvim_typescript#diagnostics_enable = 0
+  let g:nvim_typescript#diagnostics_enable = 1
 
   call deoplete#custom#source('ale', 'rank', 999)
 endif
@@ -81,6 +85,12 @@ nmap <s-tab> gT
 let g:lasttab = 1
 nmap <silent> <c-t> :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
+
+" Copy current file to clipboard
+nmap <Space>cc :let @*=expand("%")<CR>
+
+" Copy current file to clipboard
+nmap <Space>ww :CtrlSpaceSaveWorkspace<CR>
 
 " UI Config
 set nu
@@ -117,12 +127,12 @@ set iskeyword-=.
 
 " Folding
 " set foldmethod=indent   " fold based on indent level
-set foldnestmax=10      " max 10 depth
-set foldenable          " don't fold files by default on open
+" set foldnestmax=10      " max 10 depth
+" set foldenable          " don't fold files by default on open
 
-set foldlevelstart=0    " start with fold level of 1
-set foldmethod=marker
-set foldlevel=0
+" set foldlevelstart=0    " start with fold level of 1
+" set foldmethod=marker
+" set foldlevel=0
 
 set omnifunc=syntaxcomplete#Complete
 
@@ -141,9 +151,13 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
-\   'typescript': ['tslint', 'prettier'],
-\   'typescriptreact': ['tslint', 'prettier'],
+\   'typescript': ['tslint', 'prettier', 'eslint'],
+\   'typescriptreact': ['tslint', 'prettier', 'eslint'],
+\   'python': ['black', 'isort'],
+\   'json5': ['prettier'],
 \}
+
+let g:ale_python_black_options = "--fast --line-length 110"
 
 " Airline + Temuxline Config
 let g:tmuxline_preset = 'tmux'
@@ -323,6 +337,7 @@ nnoremap <leader>K <Nop>
 set mouse=a
 
 set shiftwidth=2
+set textwidth=109 "Benchling default width
 
 set autoindent
 set smartindent
@@ -347,4 +362,5 @@ highlight ExtraWhitespace guibg=#990000 ctermbg=red
 ":autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
 
 au BufNewFile,BufRead *.ejs set filetype=html
-au BufWrite *.ts,*.tsx TSGetDiagnostics
+"au BufWrite *.ts,*.tsx TSGetDiagnostics
+au BufWrite *.ts,*.tsx TSGetCodeFix
