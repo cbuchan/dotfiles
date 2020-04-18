@@ -86,18 +86,17 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.aliases.sh
-source /usr/local/share/chruby/chruby.sh
+# source /usr/local/share/chruby/chruby.sh
 
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
-# NVM setup
+# NVM setup (kinda slow)
 export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
-# [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-# [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -109,13 +108,11 @@ if [ -d /usr/local/al-scripts/profile.d ]; then
   done
 fi
 
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # Benchling
 export PATH=$PATH:$HOME/aurelia/bin
-
+source ~/.envs/aurelia/bin/activate
 source $HOME/.benchling-dotfiles/.zshrc.benchling
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# source ~/.envs/aurelia/bin/activate
-
-# Code kata
-eval "$(pyenv init -)"
-export PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin"
