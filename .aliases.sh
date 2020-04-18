@@ -115,18 +115,13 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias rc="rails console"
 
-# AngelList
-alias cda='cd ~/Workspace/AngelList'
-alias cdl='cd ~/Workspace/alist'
-alias gql='rake graphql:schema:dump && rake graphql:export && yarn run export'
-
-alias mdl='LOG_LEVEL=WARN make debug'
-alias mdd='make debug-deps'
-
 # Bitbadge
 alias cdbb='cd ~/Workspace/bitbadge-shopify'
 
 # Benchling
 alias cdb='cd ~/Workspace/aurelia'
-
 alias bd='bin/dev'
+alias bdc='bin/dev check'
+alias gql='bin/dev extract-gql'
+alias jsunit='bin/dev jsunit --live-build'
+alias pyunit='bin/dev pyunit-watcher'
