@@ -6,6 +6,8 @@
   - [mkdir -p ~/.config/nvim, Creating nvim directory]
   - [mkdir -p ~/Screenshots, Creating screenshots directory]
   - [./macos.sh, Installing macOS settings]
+  - [brew update, Updating homebrew]
+  # - [brew doctor, Checking homebrew health]
   # - [brew link --overwrite node, Fix brew node]
 
 - clean: ['~', '~/.config']
@@ -14,7 +16,6 @@
   - Brewfile
 
 - shell:
-  - [brew update, Updating homebrew]
   - [brew upgrade --ignore-pinned, Upgrading homebrew]
   - [brew cu --all -y, Upgrading casks]
 
